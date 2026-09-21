@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navItems = [
         { name: "Home", href: "#home" },
