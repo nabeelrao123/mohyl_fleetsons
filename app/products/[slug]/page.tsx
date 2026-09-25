@@ -1,13 +1,30 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, CheckCircle2, Mail, MapPin, Phone, Ship } from "lucide-react";
 import type { Metadata } from "next";
+// import steelturing from "../public/assets/steel tuning.jpg";
+import steelturing from "../../../public/assets/steel tuning.jpg"
+import bluesteel from "../../../public/assets/blue steel.jpg";
+import shreddedsteel from "../../../public/assets/shredded steel.jpg";
+import rebarendcut from "../../../public/assets/rebarendcut.jpg";
+import railwheel from "../../../public/assets/rail wheel.jpg";
+import compressorscrap from "../../../public/assets/steel tuning.jpg";
+import gibundles from "../../../public/assets/steel tuning.jpg";
+import fabricationscrap from "../../../public/assets/steel tuning.jpg";
+import loosebushling from "../../../public/assets/steel tuning.jpg";
+import lmsbundle from "../../../public/assets/steel tuning.jpg";
+import motorscrap from "../../../public/assets/steel tuning.jpg";
+
+
+import Image from "next/image";
+
+
 
 type ProductDetail = {
   title: string;
   subtitle: string;
   description: string;
   heroImage: string;
-  relatedImages: { src: string; alt: string; title: string }[];
+  relatedImages: { src: string; alt: string; title: string }[] | any;
   highlights: string[];
 };
 
@@ -21,25 +38,31 @@ const products: Record<string, ProductDetail> = {
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=88",
     relatedImages: [
       {
-        src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85",
-        alt: "Iron and steel industrial scrap",
-        title: "Industrial Scrap Materials",
+        src: steelturing,
+        alt: "Steel Turing",
+        title: "Steel Turing",
       },
       {
-        src: "https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1200&q=85",
-        alt: "Industrial metal processing",
-        title: "Industrial Processing",
+        src: railwheel,
+        alt: "Rail Wheels",
+        title: "Rail Wheels",
       },
       {
-        src: "https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1200&q=85",
-        alt: "Steel manufacturing facility",
-        title: "Steel Industry",
+        src: rebarendcut,
+        alt: "Rebar-Endcut",
+        title: "Rebar-Endcut",
       },
       {
-        src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=85",
+        src: shreddedsteel,
         alt: "Industrial material handling",
-        title: "Material Handling",
+        title: "Shredded Steel",
       },
+          {
+        src: bluesteel,
+        alt: "Blue Steel",
+        title: "Blue Steel",
+      },
+  
     ],
     highlights: [
       "Reliable sourcing and supplier coordination",
@@ -268,7 +291,7 @@ console.log( 'ppppppppp', products[slug].subtitle as any )
                   }`}
                             >
                   <div className={`${index === 0 ? "h-80" : "h-64"} overflow-hidden`}>
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
                       loading="lazy"
@@ -285,7 +308,11 @@ console.log( 'ppppppppp', products[slug].subtitle as any )
                 </div>
               ))}
             </div>
-          ) : (
+          ) 
+          
+          
+          
+          : (
             <div className="rounded-2xl border border-slate-200 bg-white p-10 text-center">
               <p className="text-slate-600">
                 Product gallery content can be added here using the same reusable

@@ -4059,222 +4059,220 @@ export default function Newmohyl() {
 
     <>
 
-<section
-  id="home"
-  className="relative min-h-screen overflow-hidden bg-black pt-20"
->
-  {/* ====================================
+      <section
+        id="home"
+        className="relative min-h-screen overflow-hidden bg-black pt-20"
+      >
+        {/* ====================================
       HERO BACKGROUND IMAGE SLIDER
   ===================================== */}
-  <div className="absolute inset-0">
-    {heroImages.map((image, index) => (
-      <div
-        key={image}
-        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
-          heroImage === index ? "opacity-100" : "opacity-0"
-        }`}
-        style={{
-          backgroundImage: `url("${image}")`,
-        }}
-      />
-    ))}
-  </div>
+        <div className="absolute inset-0">
+          {heroImages.map((image, index) => (
+            <div
+              key={image}
+              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${heroImage === index ? "opacity-100" : "opacity-0"
+                }`}
+              style={{
+                backgroundImage: `url("${image}")`,
+              }}
+            />
+          ))}
+        </div>
 
-  {/* ====================================
+        {/* ====================================
       DARK OVERLAY
       No green overlay. Only black transparent
       overlay for text readability.
   ===================================== */}
-  <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/35" />
 
-  {/* Stronger darkness on the left for heading readability */}
-  {/* <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20" /> */}
-  <div className="absolute inset-0 " />
+        {/* Stronger darkness on the left for heading readability */}
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20" /> */}
+        <div className="absolute inset-0 " />
 
-  {/* Bottom cinematic darkening */}
-  {/* <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/80 to-transparent" /> */}
-   <div className="absolute inset-x-0 bottom-0 h-48 " />
+        {/* Bottom cinematic darkening */}
+        {/* <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/80 to-transparent" /> */}
+        <div className="absolute inset-x-0 bottom-0 h-48 " />
 
-  {/* ====================================
+        {/* ====================================
       DECORATIVE INDUSTRIAL CIRCLES
   ===================================== */}
-  <div className="absolute -right-32 top-20 h-96 w-96 rounded-full border border-[#f58220]/30" />
-  <div className="absolute -right-10 top-36 h-72 w-72 rounded-full border border-[#f58220]/20" />
+        <div className="absolute -right-32 top-20 h-96 w-96 rounded-full border border-[#f58220]/30" />
+        <div className="absolute -right-10 top-36 h-72 w-72 rounded-full border border-[#f58220]/20" />
 
-  {/* ====================================
+        {/* ====================================
       HERO CONTENT
   ===================================== */}
-  <div className="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-2 lg:px-8">
+        <div className="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-2 lg:px-8">
 
-    {/* ====================================
+          {/* ====================================
         LEFT CONTENT
     ===================================== */}
-    <div className="max-w-3xl">
+          <div className="max-w-3xl">
 
-      {/* Badge */}
-      <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#f58220]/50 bg-black/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ff9d48] backdrop-blur-sm">
-        <span className="h-2 w-2 rounded-full bg-[#f58220]" />
-        Trusted Industrial Trading Partner
-      </div>
+            {/* Badge */}
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#f58220]/50 bg-black/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ff9d48] backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-[#f58220]" />
+              Trusted Industrial Trading Partner
+            </div>
 
-      {/* Main Heading */}
-      <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
-        Moving Industry.
-        <span className="block text-[#f58220]">
-          Connecting Markets.
-        </span>
-        Building Trust.
-      </h1>
+            {/* Main Heading */}
+            <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
+              Moving Industry.
+              <span className="block text-[#f58220]">
+                Connecting Markets.
+              </span>
+              Building Trust.
+            </h1>
 
-      {/* Description */}
-      <p className="mt-7 max-w-2xl text-base leading-8 text-white drop-shadow-lg sm:text-lg">
-        M. HOLLYFEET &amp; SONS specializes in Iron &amp; Steel Scrap,
-        Ferro Alloys, Skull Breaker (JAM), and International Trade and
-        Indenting solutions.
-      </p>
+            {/* Description */}
+            <p className="mt-7 max-w-2xl text-base leading-8 text-white drop-shadow-lg sm:text-lg">
+              M. HOLLYFEET &amp; SONS specializes in Iron &amp; Steel Scrap,
+              Ferro Alloys, Skull Breaker (JAM), and International Trade and
+              Indenting solutions.
+            </p>
 
-      {/* Buttons */}
-      <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            {/* Buttons */}
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
 
-        {/* Products */}
-        <a
-          href="#products"
-          className="group flex items-center justify-center gap-3 rounded-lg bg-[#f58220] px-7 py-4 font-bold text-white shadow-xl transition duration-300 hover:bg-[#e87312]"
-        >
-          Explore Our Products
+              {/* Products */}
+              <a
+                href="#products"
+                className="group flex items-center justify-center gap-3 rounded-lg bg-[#f58220] px-7 py-4 font-bold text-white shadow-xl transition duration-300 hover:bg-[#e87312]"
+              >
+                Explore Our Products
 
-          <ArrowRight
-            size={19}
-            className="transition duration-300 group-hover:translate-x-1"
-          />
-        </a>
+                <ArrowRight
+                  size={19}
+                  className="transition duration-300 group-hover:translate-x-1"
+                />
+              </a>
 
-        {/* Contact */}
-        <a
-          href="#contact"
-          className="flex items-center justify-center gap-3 rounded-lg border border-white/50 bg-black/20 px-7 py-4 font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-black"
-        >
-          Contact Us
-        </a>
-      </div>
+              {/* Contact */}
+              <a
+                href="#contact"
+                className="flex items-center justify-center gap-3 rounded-lg border border-white/50 bg-black/20 px-7 py-4 font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-black"
+              >
+                Contact Us
+              </a>
+            </div>
 
-      {/* ====================================
+            {/* ====================================
           STATS
       ===================================== */}
-      <div className="mt-14 grid max-w-xl grid-cols-3 gap-4 border-t border-white/25 pt-7">
+            <div className="mt-14 grid max-w-xl grid-cols-3 gap-4 border-t border-white/25 pt-7">
 
-        {/* Global */}
-        <div>
-          <p className="text-2xl font-black text-[#f58220]">
-            Global
-          </p>
+              {/* Global */}
+              <div>
+                <p className="text-2xl font-black text-[#f58220]">
+                  Global
+                </p>
 
-          <p className="mt-1 text-xs text-white/80">
-            Trade Network
-          </p>
-        </div>
+                <p className="mt-1 text-xs text-white/80">
+                  Trade Network
+                </p>
+              </div>
 
-        {/* Quality */}
-        <div>
-          <p className="text-2xl font-black text-[#f58220]">
-            Quality
-          </p>
+              {/* Quality */}
+              <div>
+                <p className="text-2xl font-black text-[#f58220]">
+                  Quality
+                </p>
 
-          <p className="mt-1 text-xs text-white/80">
-            Focused Solutions
-          </p>
-        </div>
+                <p className="mt-1 text-xs text-white/80">
+                  Focused Solutions
+                </p>
+              </div>
 
-        {/* Trusted */}
-        <div>
-          <p className="text-2xl font-black text-[#f58220]">
-            Trusted
-          </p>
+              {/* Trusted */}
+              <div>
+                <p className="text-2xl font-black text-[#f58220]">
+                  Trusted
+                </p>
 
-          <p className="mt-1 text-xs text-white/80">
-            Business Relations
-          </p>
-        </div>
-      </div>
-    </div>
+                <p className="mt-1 text-xs text-white/80">
+                  Business Relations
+                </p>
+              </div>
+            </div>
+          </div>
 
-    {/* ====================================
+          {/* ====================================
         RIGHT BUSINESS CARD
     ===================================== */}
-    <div className="relative hidden lg:block">
-      <div className="relative ml-auto max-w-md rounded-3xl border border-white/20 bg-black/35 p-8 shadow-2xl backdrop-blur-md">
+          <div className="relative hidden lg:block">
+            <div className="relative ml-auto max-w-md rounded-3xl border border-white/20 bg-black/35 p-8 shadow-2xl backdrop-blur-md">
 
-        {/* Orange Decorative Circle */}
-        <div className="absolute -left-5 top-10 h-10 w-10 rounded-full bg-[#f58220] shadow-lg" />
+              {/* Orange Decorative Circle */}
+              <div className="absolute -left-5 top-10 h-10 w-10 rounded-full bg-[#f58220] shadow-lg" />
 
-        {/* Card Header */}
-        <div className="mb-8 flex items-center justify-between">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#f58220]">
-            Our Business
-          </p>
+              {/* Card Header */}
+              <div className="mb-8 flex items-center justify-between">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#f58220]">
+                  Our Business
+                </p>
 
-          <Globe2 className="text-white" />
+                <Globe2 className="text-white" />
+              </div>
+
+              {/* Product List */}
+              <div className="space-y-4">
+                {products.map(
+                  (product: any, index: number) =>
+                    index <= 3 && (
+                      <Link
+                        key={product.title}
+                        href={`/products/${product.slug}`}
+                        className="group flex items-center gap-4 rounded-xl border border-white/15 bg-black/30 p-4 transition duration-300 hover:border-[#f58220]/70 hover:bg-black/50"
+                      >
+                        {/* Product Number */}
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#f58220] text-xs font-black text-white">
+                          {product.number}
+                        </span>
+
+                        {/* Product Title */}
+                        <p className="font-semibold text-white">
+                          {product.title}
+                        </p>
+
+                        {/* Arrow */}
+                        <ArrowRight
+                          size={17}
+                          className="ml-auto text-white/60 transition duration-300 group-hover:translate-x-1 group-hover:text-[#f58220]"
+                        />
+                      </Link>
+                    )
+                )}
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Product List */}
-        <div className="space-y-4">
-          {products.map(
-            (product: any, index: number) =>
-              index <= 3 && (
-                <Link
-                  key={product.title}
-                  href={`/products/${product.slug}`}
-                  className="group flex items-center gap-4 rounded-xl border border-white/15 bg-black/30 p-4 transition duration-300 hover:border-[#f58220]/70 hover:bg-black/50"
-                >
-                  {/* Product Number */}
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#f58220] text-xs font-black text-white">
-                    {product.number}
-                  </span>
-
-                  {/* Product Title */}
-                  <p className="font-semibold text-white">
-                    {product.title}
-                  </p>
-
-                  {/* Arrow */}
-                  <ArrowRight
-                    size={17}
-                    className="ml-auto text-white/60 transition duration-300 group-hover:translate-x-1 group-hover:text-[#f58220]"
-                  />
-                </Link>
-              )
-          )}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* ====================================
+        {/* ====================================
       SLIDER INDICATORS
   ===================================== */}
-  <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
-    {heroImages.map((_, index) => (
-      <button
-        key={index}
-        type="button"
-        onClick={() => setHeroImage(index)}
-        aria-label={`Show hero image ${index + 1}`}
-        className={`h-1.5 rounded-full transition-all duration-500 ${
-          heroImage === index
-            ? "w-10 bg-[#f58220]"
-            : "w-2 bg-white/50 hover:bg-white"
-        }`}
-      />
-    ))}
-  </div>
+        <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => setHeroImage(index)}
+              aria-label={`Show hero image ${index + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-500 ${heroImage === index
+                  ? "w-10 bg-[#f58220]"
+                  : "w-2 bg-white/50 hover:bg-white"
+                }`}
+            />
+          ))}
+        </div>
 
-  {/* ====================================
+        {/* ====================================
       OPTIONAL SLIDE NUMBER
   ===================================== */}
-  <div className="absolute bottom-7 right-6 z-20 hidden text-xs font-bold tracking-[0.2em] text-white/70 sm:block lg:right-10">
-    0{heroImage + 1} / 03
-  </div>
-</section>
+        <div className="absolute bottom-7 right-6 z-20 hidden text-xs font-bold tracking-[0.2em] text-white/70 sm:block lg:right-10">
+          0{heroImage + 1} / 03
+        </div>
+      </section>
 
 
 
@@ -4353,7 +4351,7 @@ export default function Newmohyl() {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=2200&q=88"
                 alt="Industrial operations"
                 className="h-[500px] w-full object-cover"
               />
@@ -4434,9 +4432,9 @@ export default function Newmohyl() {
       {/* ================= PRODUCTS (CAROUSEL) ================= */}
 
 
-
       <section id="products" className="bg-slate-50 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          {/* Section Header */}
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#f58220]">
               What We Deal In
@@ -4458,12 +4456,12 @@ export default function Newmohyl() {
             onMouseEnter={() => setIsCarouselPaused(true)}
             onMouseLeave={() => setIsCarouselPaused(false)}
           >
-            {/* Prev Button */}
+            {/* Previous Button */}
             <button
               type="button"
               onClick={() => scrollCarousel("prev")}
               aria-label="Previous products"
-              className="absolute left-0 top-1/2 z-10 hidden -translate-x-4 -translate-y-1/2 items-center justify-center rounded-full bg-white p-3 text-[#174d3c] shadow-xl transition hover:bg-[#f58220] hover:text-white sm:flex"
+              className="absolute left-0 top-1/2 z-20 hidden -translate-x-5 -translate-y-1/2 items-center justify-center rounded-full bg-white p-3 text-[#174d3c] shadow-xl transition duration-300 hover:bg-[#f58220] hover:text-white sm:flex"
             >
               <ChevronLeft size={22} />
             </button>
@@ -4473,7 +4471,7 @@ export default function Newmohyl() {
               type="button"
               onClick={() => scrollCarousel("next")}
               aria-label="Next products"
-              className="absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 translate-x-4 items-center justify-center rounded-full bg-white p-3 text-[#174d3c] shadow-xl transition hover:bg-[#f58220] hover:text-white sm:flex"
+              className="absolute right-0 top-1/2 z-20 hidden translate-x-5 -translate-y-1/2 items-center justify-center rounded-full bg-white p-3 text-[#174d3c] shadow-xl transition duration-300 hover:bg-[#f58220] hover:text-white sm:flex"
             >
               <ChevronRight size={22} />
             </button>
@@ -4481,8 +4479,11 @@ export default function Newmohyl() {
             {/* Scrollable Track */}
             <div
               ref={carouselTrackRef}
-              className="carousel-track flex gap-6 overflow-x-auto pb-4"
-              style={{ scrollbarWidth: "none" }}
+              className="carousel-track flex gap-6 overflow-x-auto pb-5"
+              style={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
             >
               {products.map((product: any) => {
                 return (
@@ -4491,19 +4492,38 @@ export default function Newmohyl() {
                     href={`/products/${product.slug}`}
                     data-carousel-card
                     aria-label={`Learn more about ${product.title}`}
-                    className="group relative w-[85%] shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-2 hover:border-[#f58220] hover:shadow-2xl sm:w-[48%] lg:w-[calc(25%-18px)]"
+                    className="
+                group
+                relative
+                flex
+                min-h-[540px]
+                w-[88%]
+                shrink-0
+                flex-col
+                overflow-hidden
+                rounded-2xl
+                border
+                border-slate-200
+                bg-white
+                transition
+                duration-300
+                hover:-translate-y-2
+                hover:border-[#f58220]
+                hover:shadow-2xl
+                sm:w-[48%]
+                lg:w-[calc(33.333%-16px)]
+              "
                   >
                     {/* Product Image */}
-                    <div className="relative h-52 w-full overflow-hidden">
+                    <div className="relative h-60 w-full shrink-0 overflow-hidden bg-slate-100">
                       <Image
                         src={product.image}
                         alt={product.title}
                         loading="lazy"
-                        className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                        fill
+                        sizes="(max-width: 640px) 88vw, (max-width: 1024px) 48vw, 33vw"
+                        className="object-cover transition duration-700 group-hover:scale-110"
                       />
-
-                      {/* Image Overlay */}
-                      <div className="absolute inset-0" />
 
                       {/* Product Number */}
                       <div className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-sm font-black text-[#174d3c] shadow-lg backdrop-blur-sm">
@@ -4512,23 +4532,45 @@ export default function Newmohyl() {
                     </div>
 
                     {/* Product Content */}
-                    <div className="p-7">
-                      <h3 className="text-xl font-black text-[#174d3c]">
+                    <div className="flex flex-1 flex-col p-6">
+                      {/* Product Title */}
+                      <h3 className="text-xl font-black leading-tight text-[#174d3c] lg:text-2xl">
                         {product.title}
                       </h3>
 
-                      <p className="mt-4 text-sm leading-7 text-slate-600">
+                      {/* Description */}
+                      <p className="mt-4 text-sm leading-6 text-slate-600">
                         {product.description}
                       </p>
 
-                      {/* Learn More */}
-                      <div className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#f58220]">
-                        Learn More
+                      {/* Bullet Points */}
+                      {product.features && product.features.length > 0 && (
+                        <ul className="mt-5 space-y-2.5">
+                          {product.features.map(
+                            (feature: string, index: number) => (
+                              <li
+                                key={`${product.title}-feature-${index}`}
+                                className="flex items-start gap-3 text-sm leading-5 text-slate-600"
+                              >
+                                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f58220]" />
 
-                        <ArrowRight
-                          size={17}
-                          className="transition duration-300 group-hover:translate-x-1"
-                        />
+                                <span>{feature}</span>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      )}
+
+                      {/* Learn More */}
+                      <div className="mt-auto pt-6">
+                        <div className="inline-flex items-center gap-2 text-sm font-bold text-[#f58220]">
+                          Learn More
+
+                          <ArrowRight
+                            size={17}
+                            className="transition duration-300 group-hover:translate-x-1"
+                          />
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -4538,20 +4580,13 @@ export default function Newmohyl() {
           </div>
         </div>
 
-        {/* Hide scrollbar for the carousel track across browsers */}
+        {/* Hide Scrollbar */}
         <style jsx>{`
     .carousel-track::-webkit-scrollbar {
       display: none;
     }
   `}</style>
       </section>
-
-
-
-
-
-
-
 
 
 
