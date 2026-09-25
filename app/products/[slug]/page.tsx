@@ -92,6 +92,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  console.log('kokoko',slug)
   const product = products[slug];
 
   return {
@@ -106,8 +107,8 @@ export default async function ProductDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = products[slug];
-
+  const product :any = products[slug]; 
+console.log( 'ppppppppp', products[slug].subtitle as any )
   if (!product) {
     return (
       <main className="min-h-screen bg-white text-slate-900">
@@ -192,15 +193,26 @@ export default async function ProductDetailPage({
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-[#123d30]/65" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#123d30] via-[#174d3c]/75 to-[#174d3c]/35" />
-
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#123d30] via-[#174d3c]/75 to-[#174d3c]/35" /> */}
+        
+        
+        
+        {/* opacity ki waja say upr wali line band ki hai aur nechay wali line chali hai  */}
+        
+        
+        
+        
+        
+        
+        
+        <div className="absolute inset-0 " />
         <div className="absolute -right-32 top-28 h-96 w-96 rounded-full border border-[#f58220]/30" />
         <div className="absolute -right-8 top-44 h-72 w-72 rounded-full border border-[#f58220]/20" />
 
         <div className="relative mx-auto w-full max-w-7xl px-5 py-28 lg:px-8 lg:py-36">
           <div className="max-w-4xl">
             <Link
-              href="/#products"
+               href="/#products"
               className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-white/80 transition hover:text-[#f58220]"
             >
               <ArrowLeft size={17} />
@@ -248,13 +260,13 @@ export default async function ProductDetailPage({
 
           {product.relatedImages.length > 0 ? (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {product.relatedImages.map((image, index) => (
+              {product.relatedImages.map((image : any, index:any) => (
                 <div
                   key={image.src}
                   className={`group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:-translate-y-2 hover:border-[#f58220] hover:shadow-2xl ${
                     index === 0 ? "sm:col-span-2 lg:col-span-2" : ""
                   }`}
-                >
+                            >
                   <div className={`${index === 0 ? "h-80" : "h-64"} overflow-hidden`}>
                     <img
                       src={image.src}
