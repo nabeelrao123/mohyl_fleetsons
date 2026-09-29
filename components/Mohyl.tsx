@@ -4059,6 +4059,8 @@ export default function Newmohyl() {
 
     <>
 
+
+
       <section
         id="home"
         className="relative min-h-screen overflow-hidden bg-black pt-20"
@@ -4603,69 +4605,77 @@ export default function Newmohyl() {
         id="global"
         className="relative overflow-hidden bg-[#174d3c] py-24 lg:py-32"
       >
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=2000&q=80')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-        </div>
+        {/* Subtle brand-pattern background */}
+        <div className="pointer-events-none absolute -right-32 top-10 h-80 w-80 rounded-full border border-[#f58220]/10" />
+        <div className="pointer-events-none absolute -right-16 top-26 h-56 w-56 rounded-full border border-[#f58220]/10" />
+        <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full border border-white/5" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#f58220]">
-              International Trading
-            </p>
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+          {/* Section Header */}
+          <div className="mx-auto mb-14 max-w-4xl text-center">
+            <div className="mb-5 flex items-center justify-center gap-3">
+              <span className="h-[2px] w-10 bg-[#f58220]" />
 
-            <h2 className="mt-5 text-4xl font-black leading-tight text-white sm:text-5xl">
-              Connecting Businesses
-              <span className="block text-[#f58220]">Across Borders.</span>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#f58220]">
+                International Trading
+              </p>
+
+              <span className="h-[2px] w-10 bg-[#f58220]" />
+            </div>
+
+            <h2 className="text-4xl font-black leading-tight text-white sm:text-5xl">
+              Global Reach
             </h2>
 
-            <p className="mt-7 max-w-xl leading-8 text-slate-300">
-              Our international trade and indenting operations are designed to
-              create strong connections between suppliers, manufacturers,
-              buyers, and industrial markets.
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+              Backed by established supplier networks across the UK, Europe,
+              Africa, South America, Canada, and the USA, M. HOLLYFEET &amp;
+              SONS connects reliable international sourcing with buyers across
+              Pakistan.
             </p>
-
-            <div className="mt-10 space-y-5">
-              {[
-                "International Sourcing",
-                "Supplier & Buyer Coordination",
-                "Trade & Indenting Solutions",
-                "Professional Business Support",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-4">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f58220]">
-                    <CheckCircle2 size={18} className="text-white" />
-                  </span>
-
-                  <span className="font-semibold text-white">{item}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="relative">
-            <div className="relative aspect-square max-w-lg rounded-full border border-white/10 p-8">
-              <div className="flex h-full w-full items-center justify-center rounded-full border border-[#f58220]/30">
-                <div className="flex h-44 w-44 items-center justify-center rounded-full bg-[#f58220] shadow-[0_0_100px_rgba(245,130,32,0.3)]">
-                  <Globe2 size={80} className="text-white" />
-                </div>
-              </div>
+          {/* Global Regions */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "North America",
+              "Europe",
+              "Africa",
+              "South America",
+              "Canada",
+              "USA",
+            ].map((region) => (
+              <div
+                key={region}
+                className="group flex min-h-[76px] items-center justify-center gap-4 rounded-xl border border-white/10 bg-[#123d30] px-6 py-5 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-[#f58220]/70 hover:bg-[#0f3328] hover:shadow-2xl"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#f58220]/30 bg-[#f58220]/10">
+                  <Globe2
+                    size={22}
+                    className="text-[#f58220] transition-transform duration-300 group-hover:scale-110"
+                  />
+                </span>
 
-              <div className="absolute left-[5%] top-[20%] h-3 w-3 rounded-full bg-[#f58220] shadow-[0_0_25px_#f58220]" />
-              <div className="absolute right-[12%] top-[15%] h-3 w-3 rounded-full bg-[#f58220]" />
-              <div className="absolute bottom-[20%] left-[10%] h-3 w-3 rounded-full bg-[#f58220]" />
-              <div className="absolute bottom-[10%] right-[20%] h-3 w-3 rounded-full bg-[#f58220]" />
-            </div>
+                <span className="text-lg font-black text-white sm:text-xl">
+                  {region}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Supporting Statement */}
+          <div className="mx-auto mt-10 flex max-w-3xl items-center justify-center gap-3 text-center">
+            <span className="h-px flex-1 bg-white/10" />
+
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/50">
+              Connecting Markets • Building Long-Term Trade Relationships
+            </p>
+
+            <span className="h-px flex-1 bg-white/10" />
           </div>
         </div>
       </section>
+
 
       {/* ================= WHY CHOOSE US ================= */}
 
@@ -4903,9 +4913,12 @@ export default function Newmohyl() {
             </form>
           </div>
         </div>
-      </section>
+      </section> 
 
-      {/* ================= FOOTER ================= */}
-    </>
+
+
+
+
+        </>
   );
 }
