@@ -2488,37 +2488,7 @@ export default function Newmohyl() {
         </div>
       </section>
 
-      {/* =========================================================
-          FOOTER
-      ========================================================== */}
-      <footer className="border-t border-white/10 bg-[#123d30]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 py-8 text-center sm:flex-row sm:text-left lg:px-8">
-          <div>
-            <p className="text-sm font-black text-white">
-              M. HOLLYFEET &amp; SONS
-            </p>
-            <p className="mt-1 text-xs text-white/50">
-              Professional Industrial Trading &amp; Sourcing
-            </p>
-          </div>
-
-          <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} M. HOLLYFEET &amp; SONS. All rights
-            reserved.
-          </p>
-
-          <a
-            href="#home"
-            className="group flex items-center gap-2 text-xs font-bold text-white/70 transition hover:text-[#f58220]"
-          >
-            Back to top
-            <ArrowRight
-              size={14}
-              className="-rotate-90 transition duration-300 group-hover:-translate-y-1"
-            />
-          </a>
-        </div>
-      </footer>
+    
     </main>
   );
 }
